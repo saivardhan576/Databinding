@@ -1,0 +1,41 @@
+<body>  
+<p>login works!</p>
+<ul>
+<li *ngFor="let name of names" >{{name}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let name of objArray" >{{name | json}}</li>
+</ul>
+
+<div *ngIf="marks.length > 0;else nodata">
+    <ul>
+        <li *ngFor="let name of marks" >{{name | json}}</li>
+    </ul>
+</div>
+<ng-template #nodata>
+<!-- <div *ngIf="marks.length == 0"> -->
+   <p>There are no elements</p>
+</ng-template>
+
+<!-- <button (mouseover)="sendMessage()">Click Me Pleaseeeee...</button><br> -->
+<div>
+<button (click)="buttonClick('form1')">Form 1</button>
+<button (click)="buttonClick('form2')">Form 2</button>
+<button (click)="buttonClick('form3')">Form 3</button>
+</div><br>
+<div [ngSwitch]="msg">
+<div *ngSwitchCase="'form1'">You clicked form 1</div>
+<div *ngSwitchCase="'form2'">You clicked form 2</div>
+<div *ngSwitchCase="'form3'">You clicked form 3</div>
+<div *ngSwitchDefault>Please Click a button..</div>
+<!-- <div *ngIf="msg=='form2'">
+    <p>You clicked form2</p>
+</div>
+<div *ngIf="msg=='form3'">
+    <p>You clicked form3</p>
+</div> -->
+</div>
+
+
+</body>

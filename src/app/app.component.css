@@ -1,0 +1,15 @@
+.colorred{
+    color:red;
+    background-color: skyblue;
+    border-radius: 25px;
+}
+.firstsel{
+    color: green;
+    background-color: aqua;
+    border-radius: 20px;
+}
+.secondsel{
+    color:pink;
+    background-color: bisque;
+    border-radius: 25px;
+}
